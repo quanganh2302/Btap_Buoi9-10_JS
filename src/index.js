@@ -129,7 +129,6 @@ function getUpdateEmployee(){
     document.getElementById("luongCB").value = employee.salary;
     document.getElementById("chucvu").value = employee.classEmployee;
     document.getElementById("gioLam").value = employee.hourWork;
-// Validation
 }
 
 function resetForm(){
@@ -149,6 +148,7 @@ function updateEmployee(){
 
     var index = findById(id);
     var employee = employeeList[index];
+
     employee.fullName = fullName;
     employee.email = email;
     employee.passWord = passWord;
@@ -158,6 +158,8 @@ function updateEmployee(){
     employee.hourWork = hourWork;
 
     renderEmployee();
+    saveEmployeeList();
+
 
     resetForm();
 }
