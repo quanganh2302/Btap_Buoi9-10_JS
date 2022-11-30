@@ -12,6 +12,14 @@ function createEmployee(){
     var classEmployee =  document.getElementById("chucvu").value;
     var hourWork =  +document.getElementById("gioLam").value.trim();
 
+  // 2. check trùng id
+  for (var i = 0; i < employeeList.length; i++) {
+    if (employeeList[i].employeeId === id) {
+      alert("Id đã tồn tại");
+      return;
+    }
+  }
+
 // Tạo mảng đối tượng nhân viên
     var employee = new Employee(
     id, 
